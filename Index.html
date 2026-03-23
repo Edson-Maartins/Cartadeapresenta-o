@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edson Martins - Currículo Profissional</title>
+
     <style>
         * {
             margin: 0;
@@ -30,7 +31,7 @@
             overflow: hidden;
         }
 
-        /* Header com gradiente profissional */
+        /* Header com foto */
         .header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
@@ -38,14 +39,23 @@
             position: relative;
         }
 
-        .header::after {
-            content: '';
+        /* FOTO NO CANTO SUPERIOR DIREITO */
+        .photo-box {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            top: 20px;
+            right: 20px;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(255,255,255,0.6);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .name {
@@ -60,6 +70,7 @@
             opacity: 0.9;
             margin-bottom: 20px;
             font-weight: 400;
+            max-width: 70%;
         }
 
         .contact-info {
@@ -70,6 +81,7 @@
             padding: 15px 20px;
             border-radius: 10px;
             margin-top: 15px;
+            max-width: 80%;
         }
 
         .contact-info div {
@@ -78,17 +90,9 @@
             gap: 10px;
         }
 
-        .contact-info i {
-            font-style: normal;
-            font-weight: 600;
-        }
-
         .linkedin-link {
             color: white;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
             transition: opacity 0.3s;
         }
 
@@ -97,12 +101,10 @@
             text-decoration: underline;
         }
 
-        /* Conteúdo principal */
         .content {
             padding: 40px;
         }
 
-        /* Seções */
         .section {
             margin-bottom: 35px;
         }
@@ -127,7 +129,6 @@
             background: #00d2ff;
         }
 
-        /* Experiência profissional */
         .experience-item {
             margin-bottom: 30px;
         }
@@ -183,7 +184,6 @@
             left: 0;
         }
 
-        /* Formação acadêmica */
         .education-item {
             margin-bottom: 15px;
         }
@@ -198,7 +198,6 @@
             font-size: 0.95em;
         }
 
-        /* Grid de habilidades */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -236,7 +235,6 @@
             left: 0;
         }
 
-        /* Certificações */
         .certifications {
             display: flex;
             flex-wrap: wrap;
@@ -252,7 +250,6 @@
             color: #2c3e50;
         }
 
-        /* Informações adicionais */
         .additional-info {
             background: #f8f9fa;
             padding: 20px;
@@ -274,13 +271,17 @@
             font-weight: bold;
         }
 
-        /* Responsividade */
+        /* Responsivo */
         @media (max-width: 768px) {
-            .header {
-                padding: 30px 20px;
+
+            .photo-box {
+                width: 80px;
+                height: 80px;
+                top: 15px;
+                right: 15px;
             }
 
-            .content {
+            .header {
                 padding: 30px 20px;
             }
 
@@ -288,14 +289,9 @@
                 font-size: 2em;
             }
 
+            .title,
             .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .experience-header {
-                flex-direction: column;
-                gap: 5px;
+                max-width: 100%;
             }
 
             .skills-grid {
@@ -316,51 +312,50 @@
             }
 
             .header {
-                background: #1e3c72;
-                -webkit-print-color-adjust: exact;
+                background: #1e3c72 !important;
                 print-color-adjust: exact;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <!-- Header -->
+
+        <!-- HEADER -->
         <div class="header">
+
+            <!-- FOTO -->
+            <div class="photo-box">
+                <img src="Edson.png" alt="Foto de Edson Martins">
+            </div>
+
             <h1 class="name">EDSON MARTINS DOS SANTOS</h1>
             <div class="title">Analista de Governo e Mineração de Processos</div>
-            
+
             <div class="contact-info">
-                <div>
-                    <i>📍</i> Avenida Brasil, N°1598 - Monte Serrat – Cotia/SP - CEP: 06700-300
-                </div>
-                <div>
-                    <i>📱</i> (11) 96370-1524
-                </div>
-                <div>
-                    <i>✉️</i> edson.maartins@hotmail.com
-                </div>
-                <div>
-                    <i>🔗</i> 
-                    <a href="https://www.linkedin.com/in/edson-martins-38368172" target="_blank" class="linkedin-link">
-                        linkedin.com/in/edson-martins-38368172
-                    </a>
-                </div>
+                <div>📍 Avenida Brasil, N°1598 - Monte Serrat – Cotia/SP - CEP: 06700-300</div>
+                <div>📱 (11) 96370-1524</div>
+                <div>✉️ edson.maartins@hotmail.com</div>
+                <div>🔗 <a href="https://www.linkedin.com/in/edson-martins-38368172" target="_blank" class="linkedin-link">linkedin.com/in/edson-martins-38368172</a></div>
             </div>
         </div>
 
-        <!-- Conteúdo -->
+        <!-- CONTEÚDO -->
         <div class="content">
+
             <!-- Resumo Profissional -->
             <section class="section">
                 <h2 class="section-title">RESUMO PROFISSIONAL</h2>
-                <p style="text-align: justify;">Profissional de Processos com nove anos de experiência, conhecimento em automação de processos, mapeamento, reestruturação e melhoria contínua. Atualmente atuando como Analista de Governo e Mineração de Processos na Mapfre Seguros, onde aplico metodologias avançadas para otimização de fluxos de trabalho e análise de dados. Expertise em Power Automate para automação de tarefas e ferramentas de mineração de processos para identificação de gargalos e oportunidades de melhoria. Busco contribuir para o crescimento da empresa por meio da inovação, eficiência operacional e transformação digital.</p>
+                <p style="text-align: justify;">
+                    Profissional de Processos com nove anos de experiência...
+                </p>
             </section>
 
-            <!-- Experiência Profissional -->
+            <!-- Experiências -->
             <section class="section">
                 <h2 class="section-title">EXPERIÊNCIA PROFISSIONAL</h2>
-                
+
                 <!-- Mapfre -->
                 <div class="experience-item">
                     <div class="experience-header">
@@ -370,13 +365,13 @@
                     <div class="position">Analista de Governo e Mineração de Processos</div>
                     <div class="period">2025 – Atual</div>
                     <ul class="responsibilities">
-                        <li>Realizo análise aprofundada dos fluxos de trabalho, identificando gargalos, desvios e oportunidades de automação com base em dados reais de execução.</li>
-                        <li>Automatizo fluxos de trabalho utilizando Power Automate, integrando sistemas e eliminando tarefas manuais repetitivas, resultando em ganhos significativos de produtividade.</li>
-                        <li>Atuo na governança de processos, garantindo a padronização, conformidade e melhoria contínua dos fluxos de trabalho da organização.</li>
+                        <li>Realizo análise aprofundada dos fluxos...</li>
+                        <li>Automatizo fluxos com Power Automate...</li>
+                        <li>Atuo na governança de processos...</li>
                     </ul>
                 </div>
 
-                <!-- Fresenius Kabi - Analista -->
+                <!-- Fresenius - Analista -->
                 <div class="experience-item">
                     <div class="experience-header">
                         <span class="company">Fresenius Kabi</span>
@@ -385,14 +380,14 @@
                     <div class="position">Analista de Processos</div>
                     <div class="period">2023 – 2025</div>
                     <ul class="responsibilities">
-                        <li>Liderei projetos de automação de processos utilizando Power Automate, resultando em uma redução de 30% no tempo de execução de atividades administrativas.</li>
-                        <li>Desenvolvi dashboards interativos no Power BI para monitoramento de KPIs de qualidade e produtividade, fornecendo insights acionáveis para a tomada de decisão.</li>
-                        <li>Conduzi investigações de desvios de qualidade e eventos, implementando ações corretivas e preventivas baseadas em análise de dados.</li>
-                        <li>Mapeei e reestruturei processos críticos, aplicando conceitos de BPMN e melhoria contínua para aumentar a eficiência operacional.</li>
+                        <li>Liderei projetos de automação...</li>
+                        <li>Desenvolvi dashboards no Power BI...</li>
+                        <li>Conduzi investigações de desvios...</li>
+                        <li>Mapeei processos críticos...</li>
                     </ul>
                 </div>
 
-                <!-- Fresenius Kabi - Assistente -->
+                <!-- Fresenius - Assistente -->
                 <div class="experience-item">
                     <div class="experience-header">
                         <span class="company">Fresenius Kabi</span>
@@ -401,60 +396,67 @@
                     <div class="position">Assistente de Processos e Melhoria Contínua</div>
                     <div class="period">2020 – 2023</div>
                     <ul class="responsibilities">
-                        <li>Atuei no mapeamento e documentação de processos, identificando gargalos e propondo melhorias que resultaram em ganhos de produtividade.</li>
-                        <li>Colaborei com a gestão de projetos de melhoria contínua, utilizando metodologias ágeis e Lean Six Sigma.</li>
+                        <li>Atuei no mapeamento de processos...</li>
+                        <li>Colaborei com projetos de melhoria contínua...</li>
                     </ul>
                 </div>
+
             </section>
 
-            <!-- Formação Acadêmica -->
+            <!-- Formação -->
             <section class="section">
                 <h2 class="section-title">FORMAÇÃO ACADÊMICA</h2>
                 <div class="education-item">
                     <div class="education-title">Bacharel em Administração</div>
-                    <div class="education-detail">Universidade Anhanguera Itapecerica da Serra - Concluído em: 2023</div>
+                    <div class="education-detail">Universidade Anhanguera – Concluído em 2023</div>
                 </div>
             </section>
 
-            <!-- Competências Técnicas e Habilidades -->
+            <!-- Habilidades -->
             <section class="section">
                 <h2 class="section-title">COMPETÊNCIAS TÉCNICAS E HABILIDADES</h2>
+
                 <div class="skills-grid">
+
                     <div class="skill-category">
                         <h4>Automação e Ferramentas</h4>
                         <ul>
-                            <li>Power Automate (automação de fluxos)</li>
+                            <li>Power Automate</li>
                         </ul>
                     </div>
+
                     <div class="skill-category">
                         <h4>Melhoria Contínua e Qualidade</h4>
                         <ul>
                             <li>Green Belt Lean Six Sigma</li>
-                            <li>Investigação de Desvios de Qualidade</li>
-                            <li>Gestão de Projetos de Melhoria Contínua</li>
-                            <li>Auditor interno ISO (14001, 15001)</li>
+                            <li>Investigação de Desvios</li>
+                            <li>Projetos de Melhoria Contínua</li>
+                            <li>Auditor interno ISO (14001, 45001)</li>
                         </ul>
                     </div>
+
                     <div class="skill-category">
                         <h4>Metodologias e Ferramentas</h4>
                         <ul>
                             <li>Métodos Ágeis</li>
                             <li>Pacote Office Avançado</li>
-                            <li>KPI (Indicadores de Desempenho)</li>
+                            <li>KPIs</li>
                             <li>Governança de Processos</li>
                         </ul>
                     </div>
+
                     <div class="skill-category">
                         <h4>Idiomas e Soft Skills</h4>
                         <ul>
                             <li>Português (Nativo)</li>
-                            <li>Inglês (Básico - Bilingual Now, 2024)</li>
-                            <li>Visão analítica e Resolução de problemas</li>
-                            <li>Fácil adaptação e Ótima comunicação</li>
-                            <li>Facilidade com trabalho em grupo</li>
+                            <li>Inglês (Básico)</li>
+                            <li>Visão analítica</li>
+                            <li>Ótima comunicação</li>
+                            <li>Trabalho em equipe</li>
                             <li>Pensamento crítico</li>
                         </ul>
                     </div>
+
                 </div>
             </section>
 
@@ -465,21 +467,22 @@
                     <span class="cert-item">Green Belt Lean Six Sigma – SETEC (2023)</span>
                     <span class="cert-item">Métodos Ágeis – SETA (2024)</span>
                     <span class="cert-item">Inglês – Bilingual Now (2025)</span>
-                    <span class="cert-item">Certificação Microsoft: Power BI – Impacta (2024)</span>
+                    <span class="cert-item">Certificação Microsoft Power BI – Impacta (2024)</span>
                     <span class="cert-item">Excel Avançado – Senai (2023)</span>
                 </div>
             </section>
 
-            <!-- Informações Adicionais -->
+            <!-- Informações adicionais -->
             <section class="section">
                 <h2 class="section-title">INFORMAÇÕES ADICIONAIS</h2>
                 <div class="additional-info">
-                    <p>Atuação em governança de processos, garantindo padronização e conformidade com normativas.</p>
-                    <p>Expertise em automação de processos com Power Automate.</p>
-                    <p>Experiência em investigações de eventos e desvios de qualidade, mapeamento e reestruturação de processos.</p>
-                    <p>Responsável por treinamentos de integração, compras de suprimentos e gestão de projetos de melhoria contínua.</p>
+                    <p>Atuação em governança de processos...</p>
+                    <p>Expertise em automação de processos...</p>
+                    <p>Experiência em investigações e mapeamento...</p>
+                    <p>Responsável por treinamentos e projetos de melhoria...</p>
                 </div>
             </section>
+
         </div>
     </div>
 </body>
